@@ -1,0 +1,42 @@
+
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 15px 60px;
+    }
+
+    .time-box {
+        width: 70px;
+        height: 70px;
+    }
+
+    .time-box h3 {
+        font-size: 1.25rem;
+    }
+
+    .time-box p {
+        font-size: 12px;
+    }
+
+    .navbar .btn {
+        font-size: 0.9rem;
+    }
+
+    .preletores img {
+        max-width: 160px;
+    }
+
+    .site-footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .site-footer ul {
+        padding-left: 0;
+    }
+
+    .site-footer .list-inline-item {
+        display: block;
+        margin-bottom: 8px;
+    }
+}
