@@ -40,6 +40,44 @@ document.addEventListener('DOMContentLoaded', function () {
     startCountdown(countdownDate1);
 });
 
+// === Navbar 
+
+function createThreshold (numMin, numMax) {
+  const list = []; 
+  for (let i = numMin; i<numMax; i += 0.001) {
+    list.push (i/100); 
+  }
+  return list;
+}
+
+const nav = document.querySelector ('.navbar'); 
+
+function navCallback(entries) {
+
+  const ratio = entries[0].intersectionRatio*10000/8
+
+  console.log (ratio)
+
+  if (ratio > 70) {
+    nav.style.backgroundSize =  `100% 0%`; 
+    return; 
+  }
+
+  if (ratio < 20) {
+      nav.style.backgroundSize =  `100% 100%`;
+      return;  
+  }
+
+  nav.style.backgroundSize =  `100% ${100 - ratio}%`;
+  
+}
+
+const navOptions = {threshold: createThreshold (0,8)}; 
+
+const navObs = new IntersectionObserver(navCallback, navOptions);
+
+navObs.observe (document.querySelector('.hero'));
+
 // ==== Preletores
 
 fetch('assets/public/json/preletores.json')
@@ -55,11 +93,23 @@ fetch('assets/public/json/preletores.json')
       cardPreletor.innerHTML = `
         <img src="${preletor.imgSrc}" alt="preletor">
         <h6 class="mt-2 nomePreletor">${preletor.nome}</h6>
-        <div class="degradePreletores"> 
+        <div class="infosPreletores"> 
           <p class=""> </p>
         </div>
-
       `;
+
+      cardPreletor.addEventListener ('mouseover', (event) => {
+          event.preventDefault();
+          
+          cardPreletor.querySelector('.nomePreletor').classList.add ('top'); 
+          cardPreletor.querySelector('.infosPreletores').classList.add ('active'); 
+      });
+      cardPreletor.addEventListener ('mouseleave', (event) => {
+          event.preventDefault();
+          
+          cardPreletor.querySelector('.nomePreletor').classList.remove ('top'); 
+          cardPreletor.querySelector('.infosPreletores').classList.remove ('active');
+      });
       
       document.querySelector('#preletores-line').appendChild(cardPreletor);
     });
