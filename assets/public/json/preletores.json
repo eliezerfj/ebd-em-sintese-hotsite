@@ -1,0 +1,69 @@
+[
+    {
+        "nome": "Pr. Elias Torralbo",
+        "classe": "Adultos",
+        "imgSrc": "assets/public/images/preletores/p-elias.png"
+    },
+    {
+        "nome": "Pr. Jorge Luiz de Moraes",
+        "classe": "Adultos",
+        "imgSrc": "assets/public/images/preletores/p-jorge.png",
+        "cv": [
+            "Licenciado em Letras pela Universidade do Estado do Rio Grande do Norte – UERN;",
+            "Pós-Graduado em Logística com Ênfase em Petróleo e Gás pela Fundação Getúlio Vargas – FGV-RJ;",
+            "Formado no nível médio em Teologia pelo CETADEM;",
+            "Formado em Teologia pela ESTEADEB;",
+            "2º secretário da IEADERN/MOSSORÓ"
+        ]
+    },
+    {
+        "nome": "Pr. Rubem Varela",
+        "classe": "Jovens",
+        "imgSrc": "assets/public/images/preletores/p-rubem.png"
+    },
+    {
+        "nome": "Prof. Joseliana Quithé",
+        "classe": "Juvenis",
+        "imgSrc": "assets/public/images/preletores/p-joseliana.png",
+        "cv": [
+            "Técnica em Enfermagem;",
+            "Graduanda em Psicologia;",
+            "Acompanhante terapêutica;",
+            "Graduada em Teologia;",
+            "Professora do DEPIN Pq. dos Eucaliptos;",
+            "Professora da EBD na classe de juvenis em Pq. dos Eucaliptos;",
+            "Professora da EBD na classe de jovens em Pq. das Árvores;",
+            "Pregadora infantil autorizada pelo DEPIN Geral e intinerante na IEADERN."
+        ]
+    },
+    {
+        "nome": "Prof. Rosimar Guimarães",
+        "classe": "Adolescentes",
+        "imgSrc": "assets/public/images/preletores/p-rosimar.png",
+        "cv": [
+            "Pedagoga;",
+            "Mestra em Ciência da Educação;",
+            "Neuropedagoga;",
+            "Psicopedagoga clínica e institucional;",
+            "Pesquisadora na área da neurociência;",
+            "Coordenadora pedagógica da Área 6;",
+            "Podcaster nos quadros \"Momento Pedagógico\" de Pré-Adolescentes e Discipulando do EBD em Síntese PodCast;",
+            "Co-autora do Livro Docência em Pauta: Ângulos."
+        ]
+    },
+    {
+        "nome": "Prof. Zuenia Hebna",
+        "classe": "Pre-Adolescentes",
+        "imgSrc": "assets/public/images/preletores/p-zuenia.png",
+        "cv": [
+            "Pedagoga (desde 2019);",
+            "Pós-graduada em Educação Infantil e Anos Iniciais;",
+            "Pós-graduada em Pedagogia Hospitalar;",
+            "Pós-graduada em Alfabetização e Letramento;",
+            "Graduanda em Bilinguismo;",
+            "Graduanda em Letras – Português e Inglês;",
+            "Coordenadora pedagógica da Área 4;",
+            "Professora da EBD;"
+        ]
+    }
+]

@@ -1,0 +1,86 @@
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .ebd-image {
+        height: 90px !important;
+        width: auto;
+        padding-bottom: 20px;
+    }
+
+    .divisor-image {
+        display: none !important;
+    }
+
+
+    .hero {
+        padding: 120px 15px 60px;
+    }
+
+    .time-box {
+        width: 70px;
+        height: 70px;
+    }
+
+    .time-box h3 {
+        font-size: 1.25rem;
+    }
+
+    .time-box p {
+        font-size: 12px;
+    }
+
+    .navbar .btn {
+        font-size: 0.9rem;
+    }
+
+    .preletores img {
+        max-width: 160px;
+    }
+
+    .nomePreletor {
+        font-size: 1.25rem !important;
+    }
+
+    .site-footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .site-footer ul {
+        padding-left: 0;
+    }
+
+    .site-footer .list-inline-item {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+
+    .sintese-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .sinteseImg {
+        width: 90px;
+    }
+
+    .sinteseMeta {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .sintese-card .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .metaItem {
+        font-size: 0.9rem;
+    }
+
+    .cvList {
+        display: none;
+    }
+}

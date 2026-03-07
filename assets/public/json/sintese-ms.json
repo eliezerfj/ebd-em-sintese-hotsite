@@ -1,0 +1,56 @@
+[
+    {
+        "class": "Adultos",
+        "imgSrc": "assets/public/images/licoes/l-adultos.svg",
+        "lesson": "Homens dos quais o mundo não era digno — O legado de Abraão, Isaque e Jacó",
+        "teacherName": "Pr. Elias Torralbo",
+        "time": "13:00 - 19:00",
+        "place": "AD Mossoró Templo Sede",
+        "link": "https://ebdemsintese.com.br/evento/52/12-ebd-em-sintese#inscreva-se"
+    },
+    {
+        "class": "Discipulando",
+        "imgSrc": "assets/public/images/licoes/l-discipulandos.svg",
+        "lesson": "Conhecendo as Doutrinas Cristãs",
+        "teacherName": "Pr. Jorge Luiz",
+        "time": "13:00 - 19:00",
+        "place": "AD Mossoró Templo Sede",
+        "link": "https://ebdemsintese.com.br/evento/52/12-ebd-em-sintese#inscreva-se"
+    },
+    {
+        "class": "Jovens",
+        "imgSrc": "assets/public/images/licoes/l-jovens.svg",
+        "lesson": "Entre a verdade e o engano — Combatendo ideologias e ensinos que se opõem à Palavra de Deus",
+        "teacherName": "Pr. Rubem Varela",
+        "time": "13:00 - 19:00",
+        "place": "AD Mossoró Templo Sede",
+        "link": "https://ebdemsintese.com.br/evento/52/12-ebd-em-sintese#inscreva-se"
+    },
+    {
+        "class": "Juvenis",
+        "imgSrc": "assets/public/images/licoes/l-juvenis.svg",
+        "lesson": "O que Cristo fez por nós e o que podemos fazer pelo Reino de Deus",
+        "teacherName": "Profª. Joseliana Quithé",
+        "time": "13:00 - 19:00",
+        "place": "AD Mossoró Templo Sede",
+        "link": "https://ebdemsintese.com.br/evento/52/12-ebd-em-sintese#inscreva-se"
+    },
+    {
+        "class": "Adolescentes",
+        "imgSrc": "assets/public/images/licoes/l-adolescentes.svg",
+        "lesson": "As parábolas de Jesus são vivas",
+        "teacherName": "Profª. Rosimar Guimarães",
+        "time": "13:00 - 19:00",
+        "place": "AD Mossoró Templo Sede",
+        "link": "https://ebdemsintese.com.br/evento/52/12-ebd-em-sintese#inscreva-se"
+    },
+    {
+        "class": "Pré-adolescentes",
+        "imgSrc": "assets/public/images/licoes/l-preadolescentes.svg",
+        "lesson": "Conhecendo o caráter de Deus",
+        "teacherName": "Profª. Zuênia Hebna",
+        "time": "13:00 - 19:00",
+        "place": "AD Mossoró Templo Sede",
+        "link": "https://ebdemsintese.com.br/evento/52/12-ebd-em-sintese#inscreva-se"
+    }
+]
