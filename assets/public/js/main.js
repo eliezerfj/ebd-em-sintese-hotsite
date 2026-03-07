@@ -147,7 +147,6 @@ document.addEventListener('DOMContentLoaded', function () {
   =====================================================
   Os dados são carregados a partir de um arquivo JSON
   */
-
   fetch('assets/public/json/preletores.json')
     .then(result => result.json())
     .then(dados => {
@@ -163,13 +162,32 @@ document.addEventListener('DOMContentLoaded', function () {
         cardPreletor.className =
           'col-6 col-sm-4 col-md-3 col-lg-2 preletoresCard';
 
-        cardPreletor.innerHTML = `
-          <img src="${preletor.imgSrc}" alt="preletor">
-          <h6 class="mt-2 nomePreletor">${preletor.nome}</h6>
-          <div class="infosPreletores">
-            <p></p>
-          </div>
+        /* gera o conteúdo do CV se existir */
+        let cvHtml = "";
+
+        if (preletor.cv) {
+
+          cvHtml = `
+          <ul class="cvList">
+            ${preletor.cv.map(item =>
+            `<li class="text-primary">${item}</li>`
+          ).join("")}
+          </ul>
         `;
+
+        }
+
+        cardPreletor.innerHTML = `
+        <img src="${preletor.imgSrc}" alt="${preletor.nome}">
+
+        <h6 class="mt-2 nomePreletor">
+          ${preletor.nome}
+          ${cvHtml}
+        </h6>
+
+        <div class="infosPreletores p-4">
+        </div>
+      `;
 
         /*
         Efeito hover
@@ -207,7 +225,6 @@ document.addEventListener('DOMContentLoaded', function () {
     .catch(error => {
       console.error("Erro ao carregar preletores:", error);
     });
-
 
 
   /*
@@ -302,46 +319,31 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="sinteseData w-75">
 
             <h2>${sintese.class}</h2>
-
             <h4 class="fw-medium">${sintese.lesson}</h4>
 
-            <div class="container d-flex align-items-center">
-
-              <img class="sinteseIcon"
-              src="assets/public/images/user.svg">
-
-              <p class="m-0 me-4 ms-2">
-                ${sintese.teacherName}
-              </p>
-
-              <img class="sinteseIcon"
-              src="assets/public/images/clock.svg">
-
-              <p class="m-0 me-4 ms-2">
-                ${sintese.time}
-              </p>
-
-              <img class="sinteseIcon"
-              src="assets/public/images/place.svg">
-
-              <p class="m-0 me-4 ms-2">
-                ${sintese.place}
-              </p>
-
+            <div class="sinteseMeta">
+              <div class="metaItem">
+                <img class="sinteseIcon" src="assets/public/images/user.svg">
+                <p>${sintese.teacherName}</p>
+              </div>
+              <div class="metaItem">
+                <img class="sinteseIcon" src="assets/public/images/clock.svg">
+                <p>${sintese.time}</p>
+              </div>
+              <div class="metaItem">
+                <img class="sinteseIcon" src="assets/public/images/place.svg">
+                <p>${sintese.place}</p>
+              </div>
             </div>
 
           </div>
 
-          <a href=""
-          class="btn btn-warning btn-md d-flex align-items-center gap-2">
-
+          <a href="${sintese.link}" class="btn btn-warning btn-md d-flex align-items-center gap-2">
             <p class="m-0">
               <span>Inscreva-se</span>
             </p>
-
             <img class="sinteseIcon"
             src="assets/public/images/arrow.svg">
-
           </a>
         `;
 
@@ -354,4 +356,63 @@ document.addEventListener('DOMContentLoaded', function () {
       console.error("Erro ao carregar sínteses:", error);
     });
 
+
+
+
+  fetch('assets/public/json/sintese-ms.json')
+    .then(result => result.json())
+    .then(data => {
+
+      const container = document.querySelector('#oeste');
+
+      if (!container) return;
+
+      data.forEach(sintese => {
+
+        const sinteseCard = document.createElement('div');
+
+        sinteseCard.className = 'sintese-card';
+
+        sinteseCard.innerHTML = `
+          <img src="${sintese.imgSrc}" class="sinteseImg">
+
+          <div class="sinteseData w-75">
+
+            <h2>${sintese.class}</h2>
+            <h4 class="fw-medium">${sintese.lesson}</h4>
+
+            <div class="sinteseMeta">
+              <div class="metaItem">
+                <img class="sinteseIcon" src="assets/public/images/user.svg">
+                <p>${sintese.teacherName}</p>
+              </div>
+              <div class="metaItem">
+                <img class="sinteseIcon" src="assets/public/images/clock.svg">
+                <p>${sintese.time}</p>
+              </div>
+              <div class="metaItem">
+                <img class="sinteseIcon" src="assets/public/images/place.svg">
+                <p>${sintese.place}</p>
+              </div>
+            </div>
+
+          </div>
+
+          <a href="${sintese.link}" class="btn btn-warning btn-md d-flex align-items-center gap-2">
+            <p class="m-0">
+              <span>Inscreva-se</span>
+            </p>
+            <img class="sinteseIcon"
+            src="assets/public/images/arrow.svg">
+          </a>
+        `;
+
+        container.appendChild(sinteseCard);
+
+      });
+
+    })
+    .catch(error => {
+      console.error("Erro ao carregar sínteses:", error);
+    });
 });

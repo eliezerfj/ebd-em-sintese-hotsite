@@ -58,20 +58,6 @@ h5 {
     width: auto;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-
-    .ebd-image {
-        height: auto;
-        width: 70%;
-        max-width: 70%;
-    }
-
-    .divisor-image {
-        display: none;
-    }
-
-}
 
 /* COUNTDOWN */
 .time-box {
@@ -172,11 +158,19 @@ h5 {
 }
 
 /* SÍNTESES */
-.sinteses .nav-tabs .nav-link.active {
-    background-color: #002B45;
-    color: #fff;
+.nav-tabs .nav-link {
+    color: #3d98d1;
     border: none;
+    border-bottom: 2px solid transparent;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
 
+.sinteses .nav-tabs .nav-link.active {
+    color: #002B45;
+    border: none;
+    border-bottom: 3px solid #002B45;
+    background-color: transparent;
 }
 
 .sintese-card {
@@ -197,7 +191,24 @@ h5 {
     width: min(20px, 2vw);
 }
 
-.sinteseData {}
+/* contenedor de metadatos */
+.sinteseMeta {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* item individual */
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    padding-right: 10px;
+}
+
+.metaItem p {
+    margin: 0;
+}
 
 /* PRELETORES */
 .preletoresCard img {
@@ -281,6 +292,27 @@ h5 {
     top: 5%;
     color: #002B45;
     animation: ascend 0.3s;
+}
+
+.cvList {
+    opacity: 0;
+    margin: 8px 0 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.85rem;
+    text-align: left;
+    transition: opacity 0.3s ease;
+}
+
+.nomePreletor.top .cvList {
+    opacity: 1;
+}
+
+.cvList li {
+    margin-bottom: 6px;
+    line-height: 1.3;
+    border-left: 1px solid #00416A;
+    padding-left: 8px;
 }
 
 @keyframes ascend {
