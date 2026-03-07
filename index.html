@@ -22,8 +22,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Placeholder.png" alt="DENEC"
-                    style="height:40px; width:auto;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Placeholder.png" alt="DENEC" style="height:40px; width:auto;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -47,16 +46,12 @@
 
     <!-- HERO -->
     <section class="hero">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <h2 class="display-6 fw-bold">36ª EBD EM SÍNTESE</h2>
-                    <p class="lead">28 DE MARÇO | 14h às 18h</p>
-                </div>
-                <div class="col-md-6">
-                    <h2 class="display-6 fw-bold">12ª EBD EM SÍNTESE NO OESTE POTIGUAR</h2>
-                    <p class="lead">29 DE MARÇO | 14h às 18h</p>
-                </div>
+        <div class="container d-flex flex-column align-items-center justify-content-end">
+            <img class="homensImg" src="assets/public/images/homens.svg">
+            <div class="container w-100 d-flex justify-content-center align-items-center mb-4 gap-3">
+                    <img class="heroImgData" src="assets/public/images/36-ebd.svg">
+                    <img class="heroDivisor" src="assets/public/images/divisor-ebd.svg">
+                    <img class="heroImgData" src="assets/public/images/12-ebd.svg">
             </div>
 
             <!-- COUNTDOWN -->
@@ -65,17 +60,17 @@
                     <h3 id="days" class="fw-bold mb-0">00</h3>
                     <p class="mb-0 label text-danger fw-bold">DIAS</p>
                 </div>
-                <span class="fw-bold text-white fs-4">:</span>
+                <span class="fw-bold text-white fs-1">:</span>
                 <div class="time-box text-center">
                     <h3 id="hours" class="fw-bold mb-0">00</h3>
                     <p class="mb-0 label text-warning fw-bold">HORAS</p>
                 </div>
-                <span class="fw-bold text-white fs-4">:</span>
+                <span class="fw-bold text-white fs-1">:</span>
                 <div class="time-box text-center">
                     <h3 id="minutes" class="fw-bold mb-0">00</h3>
                     <p class="mb-0 label text-primary fw-bold">MINUTOS</p>
                 </div>
-                <span class="fw-bold text-white fs-4">:</span>
+                <span class="fw-bold text-white fs-1">:</span>
                 <div class="time-box text-center">
                     <h3 id="seconds" class="fw-bold mb-0">00</h3>
                     <p class="mb-0 label text-info fw-bold">SEGUNDOS</p>
@@ -111,21 +106,7 @@
 
             <div class="tab-content">
                 <div id="natal" class="tab-pane fade show active">
-                    <div class="sintese-card">
-                        <h5>ADULTOS</h5>
-                        <p>Homens dos quais o mundo não era digno - 01: Exemplo de Altruísmo...</p>
-                        <a href="#" class="btn btn-warning btn-sm">Ver mais</a>
-                    </div>
-                    <div class="sintese-card">
-                        <h5>DISCIPULANDOS</h5>
-                        <p>Homens dos quais o mundo não era digno - 01: Exemplo de Altruísmo...</p>
-                        <a href="#" class="btn btn-warning btn-sm">Ver mais</a>
-                    </div>
-                    <div class="sintese-card">
-                        <h5>JOVENS</h5>
-                        <p>Entre a verdade e o engano...</p>
-                        <a href="#" class="btn btn-warning btn-sm">Ver mais</a>
-                    </div>
+                    
                 </div>
                 <div id="oeste" class="tab-pane fade text-center">
                     <p class="text-muted">Conteúdo em breve...</p>
@@ -135,11 +116,10 @@
     </section>
 
     <!-- PRELETORES -->
-    <section class="preletores py-5 bg-light">
-        <div class="container text-center">
+    <section class="preletores py-5 bg-light d-flex flex-column align-items-center justify-content-center">
+        <div class="container text-center d-flex flex-column align-items-center ms-0 me-0 w-100">
             <h2 class="mb-5">PRELETORES</h2>
-            <div class="row justify-content-center g-4" id="preletores-line">
-            </div>
+            <div class="row justify-content-center gap-4 m-0 " id="preletores-line"> </div>
         </div>
     </section>
 

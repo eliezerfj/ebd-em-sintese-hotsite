@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
     startCountdown(countdownDate1);
 });
 
+// ==== Preletores
+
 fetch('assets/public/json/preletores.json')
   .then(
     result => result.json()
@@ -48,12 +50,14 @@ fetch('assets/public/json/preletores.json')
     console.log (dados);
     dados.forEach(preletor => {
       const cardPreletor = document.createElement('div');
-      cardPreletor.className = 'col-6 col-sm-4 col-md-3 col-lg-2';
+      cardPreletor.className = 'col-6 col-sm-4 col-md-3 col-lg-2 preletoresCard';
       
       cardPreletor.innerHTML = `
-        <img src="${preletor.imgSrc}" alt="">
-        <h6 class="mt-2">${preletor.nome}</h6>
-        <div class>
+        <img src="${preletor.imgSrc}" alt="preletor">
+        <h6 class="mt-2 nomePreletor">${preletor.nome}</h6>
+        <div class="degradePreletores"> 
+          <p class=""> </p>
+        </div>
 
       `;
       
@@ -106,34 +110,34 @@ fetch('assets/public/json/videos.json')
 
 // === Sínteses
 
-fetch ('assets/public/json/sinteses').then(result => result.json()).then(data => {
+fetch ('assets/public/json/sintese.json').then(result => result.json()).then(data => {
     data.forEach (sintese => {
       const sinteseCard = document.createElement ('div');
 
-      sinteseCard.className = 'sinteseCard'; 
-
+      sinteseCard.className = 'sintese-card'; 
+      
       sinteseCard.innerHTML = `
         <img src='${sintese.imgSrc}' class='sinteseImg'>
-        <div class='sinteseData'> 
+        <div class='sinteseData w-75'> 
           <h2 class=''> ${sintese.class} </h2>
-          <h3 class=''> ${sintese.lesson} </h2>
-          <div class='sinteseInfo'> 
+          <h4 class='fw-medium'> ${sintese.lesson} </h2>
+          <div class='container d-flex align-items-centerd> 
             <img class='sinteseIcon' src='assets/public/images/user.svg'>
-            <p> ${sintese.teacherName}</p>
+            <p class='m-0 me-4 ms-2'> ${sintese.teacherName}</p>
 
             <img class='sinteseIcon' src='assets/public/images/clock.svg'>
-            <p> ${sintese.time}</p>
+            <p class='m-0 me-4 ms-2'> ${sintese.time}</p>
 
             <img class='sinteseIcon' src='assets/public/images/place.svg'>
-            <p> ${sintese.place}</p>
+            <p class='m-0 me-4 ms-2'> ${sintese.place}</p>
           
-          </div>
-          <a href='' class=''> <p> Inscreva-se </p> <img src='assets/public/images/arrow.svg'> </a>
-        
+          </div>        
         </div>
+        <a href='' class='btn btn-warning btn-md d-flex align-items-center gap-2'> <p class='m-0' > <span>Inscreva-se</span> </p> <img class="sinteseIcon" src='assets/public/images/arrow.svg'> </a>
+
       `
 
-
+      document.querySelector('#natal').appendChild(sinteseCard);
     });
     
 

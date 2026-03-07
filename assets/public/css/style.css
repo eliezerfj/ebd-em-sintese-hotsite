@@ -33,10 +33,10 @@
 
     /* HERO */
     .hero {
-        background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+        background: url('/assets/public/images/fondo-header.png') center/cover no-repeat;
         color: white;
         text-align: center;
-        padding: 160px 20px 80px;
+        padding: 90px 20px 80px;
         position: relative;
     }
 
@@ -44,13 +44,42 @@
         background-color: #ffc107;
         border: none;
         font-weight: 600;
+
     }
+
+    .homensImg {
+        margin-bottom: 20px;
+        width: min(20rem, 250px);
+    }
+    .heroImgData {
+        height: 20vh;
+
+    }
+
+    .heroDivisor {
+        height: 30vh;
+    }
+
+    @media (max-width:720px) {
+    .homensImg {
+        margin-bottom: 10px;
+        width: min(15rem, 35vw);
+    }
+    .heroImgData {
+        height: min(5.5vh,20rem);
+    }
+
+    .heroDivisor {
+        height: min(25vh, 5rem);
+    }
+    }
+
 
     /* COUNTDOWN */
     .time-box {
-        width: 90px;
-        height: 90px;
-        background-color: rgba(255, 255, 255, 0.85);
+        width: 10rem;
+        height: 10rem;
+        background-color: rgba(255, 255, 255, 0.607);
         border-radius: 8px;
         display: flex;
         flex-direction: column;
@@ -72,8 +101,28 @@
     }
 
     .time-box p {
+        font-size: 25px;
+        margin-top: 4px;
+    }
+    #days, #hours, #minutes, #seconds {
+            font-size: 40px;
+    }
+
+    @media (max-width: 720px) {
+        .time-box p{
+            font-size: 10px;
+        }
+        .time-box {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+        .time-box p {
         font-size: 14px;
         margin-top: 4px;
+        }
+        #days, #hours, #minutes, #seconds {
+            font-size: 15px;
+        }
     }
 
     /*VÍDEOS*/
@@ -138,6 +187,7 @@
         background-color: #002B45;
         color: #fff;
         border: none;
+
     }
 
     .sintese-card {
@@ -146,14 +196,64 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         margin-bottom: 15px;
         padding: 15px;
+
+        display: flex;
+        align-items:center;
+        justify-content: space-around;
+        gap: 1.5rem;
+    }
+
+    .sinteseIcon {
+        margin: 0;
+        width: min(20px, 2vw);
+    }
+
+    .sinteseData { 
     }
 
     /* PRELETORES */
         .preletores img {
             border-radius: 10px;
-            object-fit: cover;
+            object-fit:cover;
+            height: 40vh;
+            width: 50vw;
+            margin: 0;
+        }
+
+        .preletoresCard {
+            border-radius: 10px;
+            padding: 0;
+            position: relative;
+            background: linear-gradient( 
+                to top right, 
+                #00385E 0%,
+                #013050ed 60%,
+                white 100%
+            );   
+        }
+
+        .degradePreletores {
+            display: none;
+        }
+
+        .nomePreletor {
+            font-weight: bold;
+            position: absolute;
+            z-index: 1;
+            top: 80%;
+            left: 5%;
+
+            font-size: 1rem;
+        }
+
+        .preletoresCard img {
             width: 100%;
-            max-width: 220px;
+        }
+
+        
+
+        #preletores-line {
+    
         }
 
         /* AVISO */

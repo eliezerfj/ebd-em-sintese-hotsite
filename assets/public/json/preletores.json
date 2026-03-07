@@ -2,32 +2,32 @@
     {
         "nome": "Pr. Elias Torralbo",
         "classe": "Adultos", 
-        "imgSrc": ""
+        "imgSrc": "assets/public/images/preletores/p-elias.png"
     }, 
     {
         "nome": "Pr. Jorge Luiz de Moraes",
         "classe": "Adultos", 
-        "imgSrc": ""
+        "imgSrc": "assets/public/images/preletores/p-jorge.png"
     },
     {
         "nome": "Pr. Rubem Varela",
         "classe": "Jovens", 
-        "imgSrc": ""
+        "imgSrc": "assets/public/images/preletores/p-rubem.png"
     },
     {
         "nome": "Prof. Joseliana Quithé",
         "classe": "Juvenis", 
-        "imgSrc": ""
+        "imgSrc": "assets/public/images/preletores/p-joseliana.png"
     },
     {
         "nome": "Prof. Rosimar Guimarães",
         "classe": "Adolescentes", 
-        "imgSrc": ""
+        "imgSrc": "assets/public/images/preletores/p-rosimar.png"
     },
     {
         "nome": "Prof. Zuenia Hebna",
         "classe": "Pre-Adolescentes", 
-        "imgSrc": ""
+        "imgSrc": "assets/public/images/preletores/p-zuenia.png"
     }
 
 
