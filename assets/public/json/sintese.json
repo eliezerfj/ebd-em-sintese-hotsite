@@ -1,0 +1,34 @@
+[
+    {
+        "class" : "Adultos", 
+        "imgSrc" : "assets/public/images/licoes/l-adultos.svg", 
+        "lesson" : "Homens dos quais o mundo não Era Digno — O Legado de Abraão, Isaque e Jacó",
+        "teacherName" : "Ir. Nome Sobrenome", 
+        "time" : "13:00 - 19:00 ", 
+        "place" : "Central" 
+
+    }, {
+        "class" : "Adultos", 
+        "imgSrc" : "assets/public/images/licoes/l-adultos.svg", 
+        "lesson" : "Homens dos quais o mundo não era digno - 01: Exemplo de Altruísmo...",
+        "teacherName" : "Ir. Nome Sobrenome", 
+        "time" : "13:00 - 19:00 ", 
+        "place" : "Central"
+    }, {
+        "class" : "Adultos", 
+        "imgSrc" : "assets/public/images/licoes/l-adultos.svg", 
+        "lesson" : "Homens dos quais o mundo não era digno - 01: Exemplo de Altruísmo...",
+        "teacherName" : "Ir. Nome Sobrenome", 
+        "time" : "13:00 - 19:00 ", 
+        "place" : "Central"
+    }, {
+        "class" : "Adultos", 
+        "imgSrc" : "assets/public/images/licoes/l-adultos.svg", 
+        "lesson" : "Homens dos quais o mundo não era digno - 01: Exemplo de Altruísmo...",
+        "teacherName" : "Ir. Nome Sobrenome", 
+        "time" : "13:00 - 19:00 ", 
+        "place" : "Central"
+    }
+
+
+]
