@@ -12,6 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="./assets/public/css/responsive.css" rel="stylesheet">
     <link href="./assets/public/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 </head>
 
 <body>
@@ -48,9 +50,6 @@
             </div>
         </div>
     </nav>
-
-
-
 
     <!-- HERO -->
     <section class="hero">
@@ -125,6 +124,7 @@
 
     <!-- VIDEO -->
     <section class="video-section py-5 text-center">
+        <img src="assets/public/images/line-pastor-martin.svg" class="videoLine" alt="line">
         <div class="container">
             <div class="d-flex flex-column gap-3">
                 <div class="ratio ratio-16x9">
@@ -134,7 +134,7 @@
         </div>
         <div class="container-fluid videos-line-container">
             <div class="container">
-                <div class="d-flex gap-3 align-items-center" id="videos-line"> </div>
+                <div class="owl-carousel owl-theme" id="videos-line"> </div>
             </div>
         </div>
     </section>
@@ -173,8 +173,9 @@
             <h2 class="mb-5">PRELETORES</h2>
             <div class="row justify-content-center gap-4 m-0 " id="preletores-line"> </div>
         </div>
-    </section>
 
+        <img class="backgroundImg" src="assets/public/images/arcos.png" id="bigCircle">
+    </section>
 
 
 
@@ -182,7 +183,16 @@
     <section class="aviso">
         <div class="container">
             <h5 class="fw-bold mb-3">Aviso de Uso de Imagem</h5>
-            <p>Durante o evento, poderão ser realizados registros em foto e vídeo...</p>
+            <div class="container d-flex justify-content-center align-items-center gap-5">
+                <img class="avisoImg" src="assets/public/images/icone-aviso.svg">
+                <p class="text-start fs-4 avisoTxt"> 
+                    Durante o evento, poderão ser realizados <b>registros em foto e vídeo</b>. 
+                    Ao se inscrever e participar, você <b>autoriza a utilização da sua imagem e/ou voz</b> pela <b>organização do evento e seus parceiros </b>
+                    — <b>sem limitação de prazo ou território</b>, respeitando os princípios da <b>Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais — LGPD)</b>
+                    — para fins de: <b>Divulgação em redes sociais e sites oficiais; Materiais institucionais e promocionais do evento; Registros históricos.</b>
+                    Para exercer seus direitos ou tirar dúvidas, entre em contato conosco através do e-mail: <b>[SEU E-MAIL DE CONTATO AQUI]</b>.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -231,6 +241,13 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
     <script src="./assets/public/js/main.js"> </script>
 
 </body>
