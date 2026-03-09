@@ -95,7 +95,17 @@ h5 {
     margin-top: 4px;
 }
 
+.contador-text {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--primary-primary-dark, #002F4D);
+}
+
 /*VÍDEOS*/
+
+.video-section {
+    background: linear-gradient(180deg, #FBF8ED 0%, rgba(251, 248, 237, 0.00) 100%);
+}
 
 .videos-line-container {
     margin-top: 20px;
@@ -163,7 +173,7 @@ h5 {
     border: none;
     border-bottom: 2px solid transparent;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .sinteses .nav-tabs .nav-link.active {
@@ -211,6 +221,25 @@ h5 {
 }
 
 /* PRELETORES */
+
+.preletores {
+    background: linear-gradient(180deg, rgba(251, 248, 237, 0.00) 0%, #FBF8ED 25%, #FBF8ED 50%, #FBF8ED 75%, rgba(251, 248, 237, 0.00) 100%);
+}
+
+.text-hand {
+    text-align: left !important;
+    font-family: "Caveat", cursive;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    background: linear-gradient(77deg, #153852 -0.43%, rgba(21, 56, 82, 0.50) 100.43%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
 .preletoresCard img {
     border-radius: 10px;
     object-fit: cover;
@@ -347,7 +376,6 @@ h5 {
 
 /* AVISO */
 .aviso {
-    background-color: #fff;
     padding: 40px 0;
     text-align: center;
 }
