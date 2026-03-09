@@ -286,6 +286,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
       container.style.justifyContent = 'center';
 
+      $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        dots: false,
+        autoplay: true,      
+        autoplayTimeout: 3000,    
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 2 
+            },
+            768: {
+                items: 4 
+            },
+            1024: {
+                items: 6 
+            }
+          }
+        });
+});
     })
     .catch(error => {
       console.error("Erro ao carregar vídeos:", error);

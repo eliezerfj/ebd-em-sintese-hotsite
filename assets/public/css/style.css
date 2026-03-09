@@ -102,9 +102,17 @@ h5 {
 }
 
 /*VÍDEOS*/
-
 .video-section {
-    background: linear-gradient(180deg, #FBF8ED 0%, rgba(251, 248, 237, 0.00) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.videoLine {
+    position: absolute;
+    width: 110vw;
+
+    top: 30%;
+    left: 0%;
 }
 
 .videos-line-container {
@@ -113,8 +121,6 @@ h5 {
     padding-top: 20px;
     background-color: #FBF8EE;
 }
-
-#videos-line {}
 
 .cardVideo {
     position: relative;
@@ -153,7 +159,7 @@ h5 {
     transition: all 0.5s ease in oklch;
     margin: 3%;
     position: absolute;
-    width: min(40px, 3.5vw);
+    width: min(40px, 3.5vw) !important;
     z-index: 2;
 }
 
@@ -164,10 +170,30 @@ h5 {
 
 .sec-video-img {
     border-radius: min(20px, 2vw);
-    width: min(200px, 15vw);
+    width: min(200px, 15vw) !important;
+}
+
+.owl-carousel .owl-item {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .sec-video-img {
+    border-radius: 4vw;
+    width: 30vw !important;
+    }
+    .play-circle {
+        width: 5vw !important;
+    }
+    .degrade {
+        border-radius: 4vw;
+        width: 30vw !important
+    }
 }
 
 /* SÍNTESES */
+
 .nav-tabs .nav-link {
     color: #3d98d1;
     border: none;
@@ -223,22 +249,8 @@ h5 {
 /* PRELETORES */
 
 .preletores {
-    background: linear-gradient(180deg, rgba(251, 248, 237, 0.00) 0%, #FBF8ED 25%, #FBF8ED 50%, #FBF8ED 75%, rgba(251, 248, 237, 0.00) 100%);
+    position: relative;
 }
-
-.text-hand {
-    text-align: left !important;
-    font-family: "Caveat", cursive;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%;
-    background: linear-gradient(77deg, #153852 -0.43%, rgba(21, 56, 82, 0.50) 100.43%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 
 .preletoresCard img {
     border-radius: 10px;
@@ -256,6 +268,7 @@ h5 {
             #00385E 0%,
             #013050ed 60%,
             white 100%);
+    z-index: 10;
 }
 
 .infosPreletores {
@@ -371,13 +384,48 @@ h5 {
     width: 100%;
 }
 
+.backgroundImg {
+    position: absolute;
+    z-index: 0;
+}
+
+#bigCircle {
+    left: 80%;
+    top: 50%;
+
+    width: 20vw;
+}
 
 
+@media (max-width: 768px) { 
+    #bigCircle {
+    left: 54%;
+    top: 50%;
+
+    width: 60vw;
+}
+}
 
 /* AVISO */
 .aviso {
     padding: 40px 0;
     text-align: center;
+}
+
+.avisoImg {
+    width: min (300px, 10vw);
+}
+
+@media (max-width: 768px) {
+    .avisoImg {
+        width: 80%;
+        opacity: 0.3;
+        position: absolute;
+    }
+    .avisoTxt {
+        font-size: 20px;
+    }
+
 }
 
 /* FOOTER */
