@@ -32,7 +32,7 @@ h5 {
 }
 
 .navbar-toggler-icon {
-    filter: invert(75%) sepia(90%) saturate(500%) hue-rotate(5deg);
+    color: #fff;
 }
 
 
