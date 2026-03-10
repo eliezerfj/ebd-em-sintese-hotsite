@@ -83,4 +83,40 @@
     .cvList {
         display: none;
     }
+
+    .sec-video-img {
+        border-radius: 4vw;
+        width: 30vw !important;
+    }
+
+    .play-circle {
+        width: 5vw !important;
+    }
+
+    .degrade {
+        border-radius: 4vw;
+        width: 30vw !important
+    }
+
+   .avisoBox {
+        flex-direction: column;
+        position: relative;
+        gap: 20px;
+        overflow: hidden;
+    }
+
+    .avisoIcon,
+    .avisoContent {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .avisoImg {
+        width: 80%;
+        opacity: 0.3;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+    }
+
 }

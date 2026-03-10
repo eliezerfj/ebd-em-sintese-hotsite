@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const cardPreletor = document.createElement('div');
 
         cardPreletor.className =
-          'col-6 col-sm-4 col-md-3 col-lg-2 preletoresCard';
+          'col-6 col-sm-4 col-md-3 col-lg-2 bg-white preletoresCard';
 
         /* gera o conteúdo do CV se existir */
         let cvHtml = "";
@@ -249,11 +249,11 @@ document.addEventListener('DOMContentLoaded', function () {
           'cardVideo col-6 col-sm-4 col-md-3 col-lg-2';
 
         cardVideo.innerHTML = `
-          <a href="${video.vidSrc}" class="cardVideo">
-            <img src="assets/public/images/play-circle.svg" class="play-circle">
-            <div class="degrade"></div>
-            <img class="sec-video-img" alt="" src="${video.videoImg}">
-          </a>
+          <div class="cardVideoItem" data-video="${video.vidSrc}">
+              <img src="assets/public/images/play-circle.svg" class="play-circle">
+              <div class="degrade"></div>
+              <img class="sec-video-img" alt="" src="${video.videoImg}">
+          </div>
         `;
 
         cardVideo.addEventListener('mouseover', () => {
@@ -286,11 +286,62 @@ document.addEventListener('DOMContentLoaded', function () {
 
       container.style.justifyContent = 'center';
 
+      $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+          loop: true,
+          margin: 20,
+          dots: false,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          responsive: {
+            0: {
+              items: 2
+            },
+            768: {
+              items: 4
+            },
+            1024: {
+              items: 6
+            }
+          }
+        });
+      });
     })
     .catch(error => {
       console.error("Erro ao carregar vídeos:", error);
     });
 
+
+  document.addEventListener("click", function (e) {
+
+    const videoItem = e.target.closest(".cardVideoItem");
+    if (!videoItem) return;
+
+    let videoSrc = videoItem.dataset.video;
+
+    // Convertir URL de YouTube a embed
+    if (videoSrc.includes("youtube.com/watch")) {
+      const id = videoSrc.split("v=")[1].split("&")[0];
+      videoSrc = `https://www.youtube.com/embed/${id}?autoplay=1`;
+    }
+
+    const frame = document.getElementById("videoFrame");
+    frame.src = videoSrc;
+
+    const modal = new bootstrap.Modal(document.getElementById('videoModal'));
+    modal.show();
+
+  });
+
+  const modalElement = document.getElementById('videoModal');
+
+  modalElement.addEventListener('hidden.bs.modal', function () {
+
+    const frame = document.getElementById("videoFrame");
+    frame.src = "";
+
+  });
 
 
   /*
@@ -318,8 +369,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
           <div class="sinteseData w-75">
 
-            <h2>${sintese.class}</h2>
-            <h4 class="fw-medium">${sintese.lesson}</h4>
+            <h3>${sintese.class}</h3>
+            <h5 class="fw-medium">${sintese.lesson}</h5>
 
             <div class="sinteseMeta">
               <div class="metaItem">
@@ -415,4 +466,64 @@ document.addEventListener('DOMContentLoaded', function () {
     .catch(error => {
       console.error("Erro ao carregar sínteses:", error);
     });
+});
+
+
+const video = document.getElementById("videoEBD");
+const btn = document.getElementById("videoBtn");
+const overlay = document.getElementById("videoOverlay");
+const wrapper = document.getElementById("videoWrapper");
+
+let hideTimer = null;
+
+function toggleVideo() {
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+}
+
+btn.addEventListener("click", toggleVideo);
+video.addEventListener("click", toggleVideo);
+
+video.addEventListener("play", () => {
+
+  overlay.classList.add("hidden");
+  btn.innerHTML = '<i class="bi bi-pause-fill"></i>';
+
+  hideTimer = setTimeout(() => {
+    btn.classList.add("hidden");
+  }, 1500);
+
+});
+
+video.addEventListener("pause", () => {
+
+  overlay.classList.remove("hidden");
+  btn.innerHTML = '<i class="bi bi-play-fill"></i>';
+  btn.classList.remove("hidden");
+
+  if (hideTimer) {
+    clearTimeout(hideTimer);
+  }
+
+});
+
+wrapper.addEventListener("mousemove", () => {
+
+  if (!video.paused) {
+
+    btn.classList.remove("hidden");
+
+    if (hideTimer) {
+      clearTimeout(hideTimer);
+    }
+
+    hideTimer = setTimeout(() => {
+      btn.classList.add("hidden");
+    }, 1500);
+
+  }
+
 });

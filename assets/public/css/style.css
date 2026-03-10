@@ -95,7 +95,84 @@ h5 {
     margin-top: 4px;
 }
 
+.contador-text {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--primary-primary-dark, #002F4D);
+}
+
 /*VÍDEOS*/
+.video-section {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #FBF8ED 0%, rgba(251, 248, 237, 0.00) 100%);
+}
+
+
+.videoWrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 47, 77, 0.9);
+}
+
+.videoPlayer {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.videoOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 43, 69, 0.35);
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    transition: opacity .3s ease;
+}
+
+.videoOverlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.videoControl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    background: #DAA019;
+    color: black;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity .25s ease, transform .2s ease;
+}
+
+.videoControl.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.videoControl:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+.videoLine {
+    position: absolute;
+    width: 110vw;
+
+    top: 30%;
+    left: 0%;
+}
 
 .videos-line-container {
     margin-top: 20px;
@@ -104,9 +181,14 @@ h5 {
     background-color: #FBF8EE;
 }
 
-#videos-line {}
-
 .cardVideo {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    align-items: end;
+}
+
+.cardVideoItem {
     position: relative;
     width: fit-content;
     display: flex;
@@ -115,7 +197,7 @@ h5 {
 
 .degrade {
     transition: all 0.3s;
-    width: 100%;
+    width: 100% !important;
     height: 100%;
 
     position: absolute;
@@ -143,7 +225,7 @@ h5 {
     transition: all 0.5s ease in oklch;
     margin: 3%;
     position: absolute;
-    width: min(40px, 3.5vw);
+    width: min(40px, 3.5vw) !important;
     z-index: 2;
 }
 
@@ -154,10 +236,17 @@ h5 {
 
 .sec-video-img {
     border-radius: min(20px, 2vw);
-    width: min(200px, 15vw);
+    width: 100% !important;
 }
 
+.owl-carousel .owl-item {
+    display: flex;
+    justify-content: center;
+}
+
+
 /* SÍNTESES */
+
 .nav-tabs .nav-link {
     color: #3d98d1;
     border: none;
@@ -166,10 +255,50 @@ h5 {
     font-size: 1rem;
 }
 
+.sinteses {
+    position: relative
+}
+
+.relogio-1 {
+    width: 163.2px;
+    height: 163.2px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: -1;
+}
+
+.relogio-2 {
+    width: 81.6px;
+    height: 81.6px;
+    position: absolute;
+    right: 138.4px;
+    top: 179.2px;
+    z-index: -1;
+}
+
+.relogio-3 {
+    width: 40.8px;
+    height: 40.8px;
+    position: absolute;
+    right: 178.4px;
+    top: 138.4px;
+    z-index: -1;
+}
+
+.relogio-4 {
+    width: 21.6px;
+    height: 21.6px;
+    position: absolute;
+    right: 144px;
+    top: 154.4px;
+    z-index: -1;
+}
+
 .sinteses .nav-tabs .nav-link.active {
     color: #002B45;
     border: none;
-    border-bottom: 3px solid #002B45;
+    border-bottom: 4px solid #002B45;
     background-color: transparent;
 }
 
@@ -211,11 +340,75 @@ h5 {
 }
 
 /* PRELETORES */
+.aneis-1 {
+    width: 250px;
+    height: 250px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    left: 276px;
+    top: 131.936px;
+    z-index: 0;
+}
+
+.aneis-2 {
+    width: 400px;
+    height: 400px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    right: 52px;
+    bottom: 144.063px;
+    z-index: 0;
+}
+
+.aneis-3 {
+    height: 800px;
+    position: absolute;
+    right: 0px;
+    bottom: -249.937px;
+    z-index: 0;
+}
+
+.aneis-4 {
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    right: 130px;
+    bottom: -255.936px;
+    z-index: 0;
+}
+
+.text-hand {
+    text-align: left;
+    font-family: "Caveat", cursive;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+    /* 64px */
+    background: linear-gradient(77deg, #153852 -0.43%, rgba(21, 56, 82, 0.50) 100.43%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.preletores {
+    position: relative;
+    background: linear-gradient(180deg,
+            rgba(251, 248, 237, 0) 0%,
+            #FBF8ED 25%,
+            #FBF8ED 50%,
+            #FBF8ED 75%,
+            rgba(251, 248, 237, 0) 100%);
+}
+
+
 .preletoresCard img {
     border-radius: 10px;
     object-fit: cover;
     width: 50vw;
     margin: 0;
+    width: 100%;
 }
 
 .preletoresCard {
@@ -227,6 +420,7 @@ h5 {
             #00385E 0%,
             #013050ed 60%,
             white 100%);
+    z-index: 2;
 }
 
 .infosPreletores {
@@ -338,19 +532,30 @@ h5 {
 }
 
 
-.preletoresCard img {
+/* AVISO */
+.aviso {
+    padding: 40px 0;
+}
+
+.avisoBox {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.avisoIcon {
+    flex: 0 0 40%;
+}
+
+.avisoContent {
+    flex: 0 0 50%;
+}
+
+.avisoImg {
+    align-items: center;
     width: 100%;
 }
 
-
-
-
-/* AVISO */
-.aviso {
-    background-color: #fff;
-    padding: 40px 0;
-    text-align: center;
-}
 
 /* FOOTER */
 .site-footer {
