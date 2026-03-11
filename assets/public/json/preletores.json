@@ -17,9 +17,20 @@
         ]
     },
     {
-        "nome": "Pr. Rubem Varela",
+        "nome": "Pb. Sérgio Lins",
         "classe": "Jovens",
-        "imgSrc": "assets/public/images/preletores/p-rubem.png"
+        "imgSrc": "assets/public/images/preletores/p-sergio.png",
+        "cv": [
+            "Diretor Executivo e Professor na área de Ensino Livre de Teologia na ESTEADEB;",
+            "Mestre em Engenharia de Produção;",
+            "Graduando em Matemática;",
+            "Graduado em Administração de Sistemas de Informação Gerencia;",
+            "Graduado em Teologia;",
+            "Técnico em TADS;",
+            "Consultor de TI em empresas de médio e grande porte;",
+            "Capacitador de Jovens e Adolescentes no projeto RESGATE;",
+            "Líder de Jovens e Adolescentes."
+        ]
     },
     {
         "nome": "Prof. Joseliana Quithé",

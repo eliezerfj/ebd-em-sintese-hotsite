@@ -17,13 +17,10 @@
     }
 
     .time-box {
-        width: 70px;
-        height: 70px;
+        width: 100px;
+        height: 100px;
     }
 
-    .time-box h3 {
-        font-size: 1.25rem;
-    }
 
     .time-box p {
         font-size: 12px;
@@ -98,7 +95,7 @@
         width: 30vw !important
     }
 
-   .avisoBox {
+    .avisoBox {
         flex-direction: column;
         position: relative;
         gap: 20px;
